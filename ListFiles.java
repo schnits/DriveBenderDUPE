@@ -42,6 +42,8 @@ public class ListFiles {
          else{
              files = f.listFiles();
              for (int i = 0; i < files.length; i++) {
+             
+                System.out.println("["+i +" / " +files.length+"]");
                  getFiles(files[i]);
              }
          }

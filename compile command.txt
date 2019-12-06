@@ -1,1 +1,8 @@
+To compile:
+
 "D:\Program Files\Java\jdk1.8.0_172\bin\javac.exe"   ListFiles.java
+
+
+to run:
+
+java ListFiles F:\GitHub\DriveBenderDUPE
