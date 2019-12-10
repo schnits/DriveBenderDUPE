@@ -6,6 +6,10 @@ public class ListFiles {
   
     
        static File mainFolder  = null;
+      
+          static  int filesmoved = 0;
+     
+   static  int totalfiles = 0;
     
      public static void main(String[] args)
      {
@@ -19,6 +23,9 @@ public class ListFiles {
     mainFolder = new File(args[0].replaceAll("\"", "\\\\\""));
          ListFiles lf = new ListFiles();
          lf.getFiles(lf.mainFolder);
+         
+           System.out.println("\n Total Files Moved:"+filesmoved+ "\n out of total files: "+totalfiles);
+         
      }
      
      
@@ -27,15 +34,17 @@ public class ListFiles {
          File files[];
          if(f.isFile())
            {  System.out.println("\n\n Looking at file: "+f.getAbsolutePath());
+                  totalfiles++;
                 if (f.getAbsolutePath().contains("FOLDER.DUPLICATE.$DRIVEBENDER"))
                   {
-                  
+                  filesmoved++;
+
                      System.out.println("\n\n File found in: "+f.getAbsolutePath());
                 f.renameTo(new File(f.getAbsolutePath().replace("FOLDER.DUPLICATE.$DRIVEBENDER\\","")));
-                System.out.println("moved file to: "+f.getAbsolutePath().replace("FOLDER.DUPLICATE.$DRIVEBENDER\\",""));
+                System.out.println("moved file to: "+f.getAbsolutePath().replace("FOLDER.DUPLICATE.$DRIVEBENDER\\","")+ "  \n\n this is the "+filesmoved+ "file moved");
                 
                   }
-                else {}
+                else { } 
              
             } 
              
