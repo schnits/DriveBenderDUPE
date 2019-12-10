@@ -5,4 +5,4 @@ To compile:
 
 to run:
 
-java ListFiles F:\GitHub\DriveBenderDUPE
+java ListFiles F:\GitHub\DriveBenderDUPE\Testgrounds
