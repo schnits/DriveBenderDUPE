@@ -38,7 +38,7 @@ public class ListFiles {
                 if (f.getAbsolutePath().contains("FOLDER.DUPLICATE.$DRIVEBENDER"))
                   {
                   filesmoved++;
-
+//Just TESTING
                      System.out.println("\n\n File found in: "+f.getAbsolutePath());
                 f.renameTo(new File(f.getAbsolutePath().replace("FOLDER.DUPLICATE.$DRIVEBENDER\\","")));
                 System.out.println("moved file to: "+f.getAbsolutePath().replace("FOLDER.DUPLICATE.$DRIVEBENDER\\","")+ "  \n\n this is the "+filesmoved+ "file moved");
