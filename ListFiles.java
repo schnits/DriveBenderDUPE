@@ -49,16 +49,29 @@ public class ListFiles {
             } 
              
          else{
+			 
+			 if(f.getAbsolutePath().contains("$RECYCLE.BIN") || f.getAbsolutePath().contains("System Volume Information"))
+			 {
+				 
+				 System.out.println("Recycle bin or System Vol Files , skipping");
+				 
+			 }
+			 else{
+				 
+				 System.out.println("Here: "+f.getAbsolutePath());
+				 
              files = f.listFiles();
              for (int i = 0; i < files.length; i++) {
              
                 System.out.println("["+i +" / " +files.length+"]");
                  getFiles(files[i]);
+			 
              }
          }
      }
 }
 
+}
 
 
 
